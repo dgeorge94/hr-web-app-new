@@ -1,0 +1,38 @@
+
+<mat-card>
+  <mat-card-content>
+    <table class="header-table">
+      <td><h3>First Name</h3></td>
+      <td><h3>Last Name</h3></td>
+      <td class="td-wide"><h3>T-Number</h3></td>
+      <td ><h3>Job/Assignment Detail</h3></td>
+      <td ><h3>Employment Status</h3></td>
+      <td ><h3>Employment Dates</h3></td>
+      <td><h3>Salary</h3></td>
+    </table>
+    <mat-accordion multi="true" *ngIf="employees.length > 0">
+      <mat-expansion-panel *ngFor="let emp of employees">
+        <mat-expansion-panel-header>
+          <table>
+          <td>{{ emp.firstName }} </td>
+          <td>{{ emp.lastName }}  </td>
+          <td > {{emp.tNumber}} </td>
+          <td > {{ emp.job }}  </td>
+          <td > {{ emp.employmentStatus }}</td>
+          <td >{{ emp.employmentDates }} </td>
+          <td>{{ emp.salary }}</td>
+        </table>
+        </mat-expansion-panel-header>
+        <table>
+        <td>DOB: {{ emp.DOB }}</td>
+        <td>SSN: {{ emp.SSN }} </td>
+        </table>
+        <mat-action-row>
+         <a href="manage"><button mat-button color="accent">MANAGE</button></a>
+          <button mat-button color="warn">DELETE</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <p class="info-text mat-body-1" *ngIf="employees.length <= 0">No Results Found</p>
+  </mat-card-content>
+</mat-card>

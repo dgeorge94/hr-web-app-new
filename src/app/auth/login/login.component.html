@@ -1,0 +1,43 @@
+<div class="main-div">
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+      <mat-card class="center-container">
+          <mat-card-header>
+              <h2>Employee Login</h2>
+          </mat-card-header>
+              <mat-form-field class="example-form">
+                  <mat-label>Email</mat-label>
+                  <input matInput
+                      type="email"
+                      id="email"
+                      placeholder="user1@atu.edu"
+                      ngModel
+                      name="email"
+                      required
+                      email
+                      autocompleteOff
+                      #emailInput="ngModel">
+                      <span class="help-block" *ngIf="!emailInput.valid && emailInput.touched" >Please enter a valid email</span>
+              </mat-form-field>
+              <mat-form-field class="example-form">
+                  <mat-label>Password</mat-label>
+                  <input matInput
+                      type="password"
+                      id="password"
+                      placeholder="Password"
+                      ngModel
+                      name="password"
+                      required
+                      #passwordInput="ngModel">
+                      <span class="help-block" *ngIf="!passwordInput.valid && passwordInput.touched" >Please enter a valid password</span>
+              </mat-form-field>
+          <button mat-raised-button
+              color="primary"
+              class="login-button"
+              [disabled]="!loginForm.valid"
+              type="submit">
+              <h1>Log In</h1></button>
+      </mat-card>
+  </form>
+</div>
+
+
