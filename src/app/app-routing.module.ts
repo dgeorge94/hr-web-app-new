@@ -8,6 +8,7 @@ import { ManageComponent } from './manage/manage.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
+  { path: '', component: LoginComponent},
   { path: 'employee', component: EmployeeComponent },
   { path: 'manage', component: ManageComponent},
   { path: 'search', component: SearchComponent},
