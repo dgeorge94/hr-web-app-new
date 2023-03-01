@@ -14,9 +14,12 @@
                       name="email"
                       required
                       email
-                      autocompleteOff
+                      autocomplete="off"
                       #emailInput="ngModel">
-                      <span class="help-block" *ngIf="!emailInput.valid && emailInput.touched" >Please enter a valid email</span>
+                      <span class="help-block"
+                            *ngIf="!emailInput.valid && emailInput.touched" >
+                            Please enter a valid email
+                      </span>
               </mat-form-field>
               <mat-form-field class="example-form">
                   <mat-label>Password</mat-label>
@@ -27,8 +30,12 @@
                       ngModel
                       name="password"
                       required
+                      autocomplete="off"
                       #passwordInput="ngModel">
-                      <span class="help-block" *ngIf="!passwordInput.valid && passwordInput.touched" >Please enter a valid password</span>
+                      <span class="help-block"
+                            *ngIf="!passwordInput.valid && passwordInput.touched" >
+                            Please enter a valid password
+                      </span>
               </mat-form-field>
           <button mat-raised-button
               color="primary"
