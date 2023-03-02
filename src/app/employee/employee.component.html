@@ -14,13 +14,13 @@
       <mat-expansion-panel *ngFor="let emp of employees">
         <mat-expansion-panel-header>
           <table>
-          <td>{{ emp.firstName }} </td>
-          <td>{{ emp.lastName }}  </td>
-          <td > {{emp.tNumber}} </td>
-          <td > {{ emp.job }}  </td>
-          <td > {{ emp.employmentStatus }}</td>
-          <td >{{ emp.employmentDates }} </td>
-          <td>${{ emp.salary }}</td>
+          <td> {{ emp.firstName }} </td>
+          <td> {{ emp.lastName }}  </td>
+          <td> {{emp.tNumber}} </td>
+          <td> {{ emp.job }}  </td>
+          <td> {{ emp.employmentStatus }} </td>
+          <td> {{ emp.employmentDates }} </td>
+          <td> ${{ emp.salary }}</td>
         </table>
         </mat-expansion-panel-header>
         <table>
@@ -28,7 +28,7 @@
         <td>SSN: {{ emp.SSN }} </td>
         </table>
         <mat-action-row>
-         <a href="manage"><button mat-button color="accent">MANAGE</button></a>
+         <a mat-button routerLink="/manage" color="accent">MANAGE</a>
           <button mat-button color="warn">DELETE</button>
         </mat-action-row>
       </mat-expansion-panel>
